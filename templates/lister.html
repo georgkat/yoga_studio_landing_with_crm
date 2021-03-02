@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+   <body>
+        <h3>Редактирование записей</h3>
+
+      <form method="post">
+      <table class="sort" border = 1 id="booklist" onclick="sortTable">
+          <thead>
+                <td><input align="center" name="sort" id="by_id" type="radio" value="c_id">id</td>
+                <td><input name="sort" id="by_c_name" type="radio" value="c_name">Имя</td>
+                <td><input name="sort" id="by_c_instagram" type="radio" value="c_instagram">Instagram</td>
+                <td><input name="sort" id="by_c_phone" type="radio" value="c_phone">Телефон</td>
+                <td><input name="sort" id="by_c_email" type="radio" value="c_email">Почта</td>
+                <td><input name="sort" id="by_product" type="radio" value="product">Продукт</td>
+                <td><input name="sort" id="by_c_r_date" type="radio" value="c_r_date">Дата регистрации</td>
+                <td><input name="sort" id="by_period" type="radio" value="period">Срок действия</td>
+                <td><input name="sort" id="by_price" type="radio" value="price">Цена</td>
+                <td><input name="sort" id="by_c_p_time" type="radio" value="c_p_time">Дата оплаты</td>
+                <td><input name="sort" id="by_verify" type="radio" value="verify">Оплачено?</td>
+                <td><input name="sort" id="by_c_endtime" type="radio" value="c_endtime">Дата окончания срока</td>
+          </thead>
+
+<!--#   id    c_name      c_instagram c_phone      c_email          product   c_r_date period   price c_p_time verify   c_endtime-->
+          <tbody>
+             {% for row in rows %}
+                <tr>
+                    <td><input size="6" type="text" name="c_id_{{row["c_id"]}}" id="c_id_{{row["c_id"]}}" value="{{row["c_id"]}}" required></td>
+                    <td><input size="20" type="text" name="c_name_{{row["c_id"]}}" id="c_name_{{row["c_id"]}}" value="{{row["c_name"]}}" required></td>
+                    <td><input size="20" type="text" name="c_instagram_{{row["c_id"]}}" id="c_instagram_{{row["c_id"]}}" value="{{row["c_instagram"]}}" required></td>
+                    <td><input size="12" type="text" name="c_phone_{{row["c_id"]}}" id="c_phone_{{row["c_id"]}}" value="{{row["c_phone"]}}" required></td>
+                    <td><input size="20" type="text" name="c_email_{{row["c_id"]}}" id="c_email_{{row["c_id"]}}" value="{{row["c_email"]}}" required></td>
+                    <td><input size="10" type="text" name="product_{{row["c_id"]}}" id="product_{{row["c_id"]}}" value="{{row["product"]}}" required></td>
+                    <td><input size="10" type="date" name="c_r_date_{{row["c_id"]}}" id="c_r_date_{{row["c_id"]}}" value="{{row["c_r_date"]}}" required></td>
+                    <td><input size="2" type="text" name="period_{{row["c_id"]}}" id="period_{{row["c_id"]}}" value="{{row["period"]}}" required></td>
+                    <td><input size="5" type="text" name="price_{{row["c_id"]}}" id="price_{{row["c_id"]}}" value="{{row["price"]}}" required></td>
+                    <td><input size="10" type="date" name="c_p_time_{{row["c_id"]}}" id="c_p_time_{{row["c_id"]}}" value="{{row["c_p_time"]}}"></td>
+                    <td><input size="3" type="checkbox" name="verify_{{row["c_id"]}}" id="verify_{{row["c_id"]}}" {{row["verify"]}}></td>
+                    <td><input size="10" type="date" name="c_endtime_{{row["c_id"]}}" id="c_endtime_{{row["c_id"]}}" value="{{row["c_endtime"]}}"></td>
+                </tr>
+             {% endfor %}
+          </tbody>
+      </table>
+              <button type="submit">ОК</button>
+      </form>
+         <script>
+
+   </body>
+</html>

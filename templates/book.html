@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>База данных клиентов</title>
+</head>
+<body>
+    <h3>Добавление записей</h3>
+
+    <div class="container">
+        <form method="post">
+            <script type="text/javascript">
+            function reload_list()
+            {parent.location.reload();}
+            </script>
+            <table border="1">
+            <tr>
+                <td>
+                    Имя*
+                </td>
+                <td>
+                    <input type="text" name="c_name" id="c_name" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Инстаграм*
+                </td>
+                <td>
+                    <input type="text" name="c_instagram" id="c_instagram" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Телефон*
+                </td>
+                <td>
+                    <input type="text" name="c_phone" id="c_phone" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Почта*
+                </td>
+                <td>
+                    <input type="email" name="c_email" id="c_email" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Продукт*
+                </td>
+                <td>
+                     <input type="text" name="product" id="product" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Дата регистрации*
+                </td>
+                <td>
+                    <input type="date" name="c_r_date" id="c_r_date" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Срок (4, 8, 12)*
+                </td>
+                <td>
+                    <input type="text" name="period" id="period" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Цена*
+                </td>
+                <td>
+                    <input type="number" name="price" id="price" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                     Дата оплаты
+                </td>
+                <td>
+                    <input type="date" name="c_p_time" id="c_p_time">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Проверка
+                </td>
+                <td>
+                    <input type="checkbox" name="c_p_verify" id="c_p_verify">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Дата окончания
+                </td>
+                <td>
+                    <input type="date" name="c_endtime" id="c_endtime">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Подтвердить
+                </td>
+                <td>
+                    <button type="submit" onclick="reload_list()">ОК</button>
+                </td>
+            </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

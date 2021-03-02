@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="height=device-height,width=device-width,user-scalable=yes,initial-scale=1.5">
+    <title>Title</title>
+</head>
+<body>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="ZSL4H35GDZ4FA">
+<table>
+<tr><td><input type="hidden" name="on0" value="Выберите срок подписки">Выберите срок подписки</td></tr><tr><td><select name="os0">
+ <option {{select_2}} value="4 недели">4 недели 2 000,00 RUB</option>
+ <option {{select_4}} value="8 недель">8 недель 4 000,00 RUB</option>
+ <option {{select_6}} value="12 недель">12 недель 6 000,00 RUB</option>
+</select> </td></tr>
+<tr><td><input type="hidden" name="on1" value="Ваш ник в Instagram">Ваш ник в Instagram</td></tr><tr><td><input type="text" name="os1" maxlength="200" value="{{instagram}}"></td></tr>
+</table>
+<input type="hidden" name="currency_code" value="RUB">
+<input type="image" src="https://www.paypalobjects.com/ru_RU/RU/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal — более безопасный и легкий способ оплаты через Интернет!">
+<img alt="" border="0" src="https://www.paypalobjects.com/ru_RU/i/scr/pixel.gif" width="1" height="1">
+</form>
+</body>
+</html>
